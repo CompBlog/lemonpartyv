@@ -8,7 +8,7 @@ using namespace std;
 // Graph class representing the adjacency list
 class Graph {
     int V;  // Number of vertices
-    vector<vector<int>> adj;  // Adjacency list
+    vector <vector<int> > adj;  // Adjacency list
 
 public:
     Graph(int V) : V(V), adj(V) {}
@@ -24,7 +24,7 @@ public:
         parallelDFSUtil(startVertex, visited);
     }
 
-    // Parallel DFS utility function
+   
     void parallelDFSUtil(int v, vector<bool>& visited) {
         visited[v] = true;
         cout << v << " ";
@@ -72,18 +72,7 @@ int main() {
     g.addEdge(2, 5);
     g.addEdge(2, 6);
     
-    /*
-        0 -------->1
-        |         / \
-        |        /   \
-        |       /     \
-        v       v       v
-        2 ----> 3       4
-        |      |
-        |      |
-        v      v
-        5      6
-    */
+   
 
     cout << "Depth-First Search (DFS): ";
     g.parallelDFS(0);
